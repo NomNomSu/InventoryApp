@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Products</string>
+    <string name="editor_delete_product_successful">Product deleted</string>
+    <string name="editor_delete_product_failed">Error with deleting product</string>
+    <string name="delete_dialog_msg">Delete this product?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="unknown_price">Unknown price</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="editor_insert_product_successful">Product saved</string>
+    <string name="editor_insert_product_failed">Error with saving product</string>
+    <string name="editor_update_product_successful">Product updated</string>
+    <string name="editor_update_product_failed">Error with updating product</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editor?</string>
+    <string name="edit_product_price">Price</string>
+    <string name="add_product">Add a Product</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="category_overview">Overview</string>
+    <string name="category_gender">Gender</string>
+    <string name="category_measurement">Measurement</string>
+    <string name="hint_product_name">Name</string>
+    <string name="customer_name_required">Customer name is required</string>
+    <string name="customer_email_required">Customer email is required</string>
+    <string name="product_name_required">Product name is required</string>
+    <string name="product_price_required">Product price is required</string>
+    <string name="product_picture_required">Product picture is required</string>
+    <string name="product_quantity_required">Product quantity is required</string>
+    <string name="action_delete_all_entries">Delete All Products</string>
+    <string name="empty_view_title_text">Nothing here</string>
+    <string name="empty_view_subtitle_text">Please add product</string>
+    <string name="editor_activity_title_new_product">Add Product</string>
+    <string name="editor_activity_title_edit_product">Edit Product</string>
+    <string name="selectPicture">Select Image</string>
+    <string name="edit_product_quantity">Quantity</string>
+    <string name="customer_email">Customer E-mail</string>
+    <string name="orderMore">Order</string>
+</resources>
