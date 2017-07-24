@@ -32,8 +32,8 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
 
         emptyView = findViewById(R.id.empty_view);
         Intent intent = getIntent();
-        Uri currentPetUri = intent.getData();
-        if (currentPetUri == null) {
+        Uri currentProductUri = intent.getData();
+        if (currentProductUri == null) {
             setTitle(getString(R.string.add_product));
         } else {
             setTitle(getString(R.string.editor_activity_title_edit_product));
