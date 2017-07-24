@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class ProductCursorAdapter extends CursorAdapter {
 
     int mQuantity;
     private ImageView mImageView;
+    //private Button mEditBuyButton;
     private CatalogActivity activity;
 
     public ProductCursorAdapter(Context context, Cursor c) {
@@ -38,6 +40,7 @@ public class ProductCursorAdapter extends CursorAdapter {
 
         id = cursor.getLong(cursor.getColumnIndex(ProductContract.ProductEntry._ID));
         mImageView = (ImageView) view.findViewById(R.id.image_view_buy);
+        //mEditBuyButton = (Button) view.findViewById(R.id.button_view_buy);
         TextView nameTextView = (TextView) view.findViewById(R.id.name);
         TextView priceTextView = (TextView) view.findViewById(R.id.text_view_price);
         final TextView quantityTextView = (TextView) view.findViewById(R.id.text_view_quantity);

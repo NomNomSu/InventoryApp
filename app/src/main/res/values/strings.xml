@@ -38,4 +38,5 @@
     <string name="edit_product_quantity">Quantity</string>
     <string name="customer_email">Customer E-mail</string>
     <string name="orderMore">Order</string>
+    <string name="buy_button_text">Buy</string>
 </resources>

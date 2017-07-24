@@ -7,6 +7,6 @@
     <color name="colorAccent">#03b400</color>
 
     <color name="editorColorPrimary">#2D3640</color>
-
-    <color name="editorColorPrimaryDark">#394450</color>
+    <color name="list_color">#9aa9b6</color>
+    <color name="editorColorPrimaryDark">#394450</color>z
 </resources>

@@ -40,7 +40,7 @@ public class EditorActivity extends AppCompatActivity implements
     private static final int EXISTING_PRODUCT_LOADER = 0;
     private Uri mCurrentProductUri;
     private EditText mNameEditText;
-    private ImageView mImageView;
+    private ImageView mImageViewAndBuyButton;
     private EditText mEditPrice;
     private TextView mTextViewQuantity;
     private int mQuantity;
@@ -78,7 +78,7 @@ public class EditorActivity extends AppCompatActivity implements
 
         // Views
         mNameEditText = (EditText) findViewById(R.id.edit_product_name);
-        mImageView = (ImageView) findViewById(R.id.image_view);
+        mImageViewAndBuyButton = (ImageView) findViewById(R.id.image_view);
         mEditPrice = (EditText) findViewById(R.id.edit_price);
         mOrderButton = (Button) findViewById(R.id.order_button);
         mTextViewQuantity = (TextView) findViewById(R.id.edit_text_quantity);
@@ -95,8 +95,8 @@ public class EditorActivity extends AppCompatActivity implements
         mButtonMinus.setOnTouchListener(mTouchListener);
         mCustomerName.setOnTouchListener(mTouchListener);
         mEmailField.setOnTouchListener(mTouchListener);
-        mImageView.setOnTouchListener(mTouchListener);
-        mImageView.setOnClickListener(new View.OnClickListener() {
+        mImageViewAndBuyButton.setOnTouchListener(mTouchListener);
+        mImageViewAndBuyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mProductHasChanged = true;
@@ -308,7 +308,7 @@ public class EditorActivity extends AppCompatActivity implements
             mEditPrice.setText(price);
             mTextViewQuantity.setText(Integer.toString(mQuantity));
             imageUri = Uri.parse(imageUriString);
-            mImageView.setImageURI(imageUri);
+            mImageViewAndBuyButton.setImageURI(imageUri);
             mCustomerName.setText(customer);
             mEmailField.setText(email);
         }
@@ -343,10 +343,10 @@ public class EditorActivity extends AppCompatActivity implements
         if (requestCode == 0 && resultCode == Activity.RESULT_OK) {
             if (data != null) {
                 imageUri = data.getData();
-                Picasso.with(EditorActivity.this).load(data.getData()).into((mImageView));
+                Picasso.with(EditorActivity.this).load(data.getData()).into((mImageViewAndBuyButton));
 
-                mImageView.setImageURI(imageUri);
-                mImageView.invalidate();
+                mImageViewAndBuyButton.setImageURI(imageUri);
+                mImageViewAndBuyButton.invalidate();
             }
         }
     }
@@ -369,7 +369,7 @@ public class EditorActivity extends AppCompatActivity implements
             intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.addCategory(Intent.CATEGORY_OPENABLE);
         }
-        intent.setType("/Image/*");
+        intent.setType("image/*");
         startActivityForResult(Intent.createChooser(intent, getString(R.string.selectPicture)), 0);
     }
 
@@ -377,13 +377,7 @@ public class EditorActivity extends AppCompatActivity implements
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.unsaved_changes_dialog_msg);
         builder.setPositiveButton(R.string.discard, discardButtonClickListener);
-        builder.setNegativeButton(R.string.keep_editing, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                if (dialog != null) {
-                    dialog.dismiss();
-                }
-            }
-        });
+        builder.setNegativeButton("Cancel", null);
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }

@@ -1,6 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-
+    <dimen name="list_quantity_size">13sp</dimen>
+    <dimen name="price_text_field_size">150dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
 </resources>
 
